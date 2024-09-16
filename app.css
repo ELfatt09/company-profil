@@ -443,7 +443,7 @@ body {
     padding: 3rem 2rem;
     background-color: #fff;
     text-align: center;
-    display: flsex;
+    display: flex;
     flex-direction: column;
 }
 
