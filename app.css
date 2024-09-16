@@ -120,6 +120,23 @@ body {
     transition: background-color 0.3s;
 }
 
+.cta-button-2 {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    max-width: 300px;
+}
+
+.cta-button-2:hover {
+    background-color: #fff;
+    color: var(--secondary-color);
+}
+
 .cta-button:hover {
     background-color: #d46752;
 }
@@ -143,7 +160,7 @@ body {
 
 .services .grid-body {
     display: flex;
-    gap: 1rem;
+    gap: 4rem;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -244,13 +261,12 @@ body {
 
 .team-grid {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .team-member {
-    max-width: 150px;
+    width: 33%;
     /* Reduced size */
     text-align: center;
 }
@@ -333,7 +349,7 @@ body {
     }
 
     .services .grid-item {
-        max-width: 90%;
+        max-width: 100%;
         margin-bottom: 1rem;
     }
 
@@ -348,7 +364,7 @@ body {
     }
 
     .team-member {
-        max-width: 90%;
+        width: 100%;
     }
 
     .cta-section {
@@ -395,4 +411,61 @@ body {
 
 .nav-item {
     margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Partners & Sponsors Section */
+.partners-sponsors {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.partners-sponsors .section-title {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.partner-item img {
+    max-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.partner-item:hover img {
+    transform: scale(1.1);
 }

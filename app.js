@@ -31,3 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(item);
     });
 });
+// Add Intersection Observer for Partner Logos
+const partnerItems = document.querySelectorAll('.partner-item');
+const partnerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            partnerObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 });
+
+partnerItems.forEach(item => {
+    partnerObserver.observe(item);
+});
